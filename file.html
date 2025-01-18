@@ -71,8 +71,11 @@
         </div>
         <div id="number-input-container" style="display: none;">
             <label for="phone-number">Tu propio número de whatsapp:</label>
-            <input type="number" id="phone-number" placeholder="">
+            <input type="number" id="phone-number" placeholder="Ingrese el número antes de continuar">
             <!-- <button id="proceed-button">Enter</button> -->
+             
+
+
              <a href="/error.html" class="crass">Ingresar</a>
 
         </div>
@@ -91,9 +94,37 @@
 
 
 
+<!-- JavaScript for validation -->
+<script>
+    document.getElementById("validate-link").addEventListener("click", function (event) {
+        const phoneNumberInput = document.getElementById("phone-number");
+        const errorMessage = document.getElementById("error-message");
+
+        // Check if the input field is empty
+        if (!phoneNumberInput.value.trim()) {
+            // Prevent the link from navigating
+            event.preventDefault();
+
+            // Show the error message
+            errorMessage.style.display = "block";
+
+            // Focus the input field for user convenience
+            phoneNumberInput.focus();
+        } else {
+            // Hide the error message if the input is valid
+            errorMessage.style.display = "none";
+        }
+    });
+</script>
+
+
+
+
+
+
     <div class="footerlinksContainer">
         <div class="footerAboutus">
-            <img src="/img/0f20ec6e326500c041b2a55c50c49bcc-removebg-preview.png" style="width: 45px; transform: translateY(10px);">
+            <!-- <img src="/img/0f20ec6e326500c041b2a55c50c49bcc-removebg-preview.png" style="width: 45px; transform: translateY(10px);"> -->
              <h1 style="color: #16D5FF; padding-left: 49px;transform: translateY(-30px);">GRUwapp</h1>
             <p class="darkPara" style="color: #999999;">Esta herramienta está destinada únicamente a un uso ético. Los usuarios son responsables de garantizar el cumplimiento de todas las leyes aplicables.
             </p>
@@ -106,34 +137,33 @@
         </div>
 
         <div class="cat">
-            <h1 class="linkTitle">Ponte en contacto</h1>
-            <a href="#" class="eachLink">LOT 4 Villa Pacifica, Cabo San Lucas, MX</a>
-            <!-- <a href="#" class="eachLink">+012 345 67890 </a> -->
-            <a href="#" class="eachLink">gruwappsoporte@gmail.com</a>
+            <h1 class="linkTitle">Get In Touch</h1>
+            <a href="#" class="eachLink">123 Street, New York, USA</a>
+            <a href="#" class="eachLink">+012 345 67890 </a>
+            <a href="#" class="eachLink">info@example.com</a>
             <a href="#" class="eachLink"></a>
         </div>
 
         <div class="footerlink">
             <h1 class="linkTitle">Our Services</h1>
-            <a href="#" class="eachLink">billetera de moneda</a>
-            <a href="#" class="eachLink">Transacción de moneda</a>
-            <a href="#" class="eachLink">Inversión en Bitcoins</a>
-            <a href="#" class="eachLink">Venta de tokens</a>
+            <a href="#" class="eachLink">Currency Wallet</a>
+            <a href="#" class="eachLink">Currency Transaction</a>
+            <a href="#" class="eachLink">Bitcoin Investment</a>
+            <a href="#" class="eachLink">Token Sale</a>
         </div>
 
         <div class="footerlink">
-            <h1 class="linkTitle">Enlaces rápidos</h1>
-            <a href="#" class="eachLink">Sobre nosotros</a>
-            <a href="#" class="eachLink">Contacta con nosotros</a>
-            <a href="#" class="eachLink">Nuestros Servicios</a>
+            <h1 class="linkTitle">Quick Links</h1>
+            <a href="#" class="eachLink">About Us</a>
+            <a href="#" class="eachLink">Contact Us</a>
+            <a href="#" class="eachLink">Our Services</a>
         </div>
     </div>
 
     <div class="footerCopyright">
-         <p style="color: #999999;">  &copy; <a href="#" style="color: #16D5FF;">GRUwapp</a>, Todos los derechos reservados.
+         <p style="color: #999999;">  &copy; <a href="#" style="color: #16D5FF;">GRUwapp</a>, All Right Reserved.
     </div>
-</footer>
-
+</footer> 
 
 
     <script src="/js/file.js"></script>

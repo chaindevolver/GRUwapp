@@ -75,6 +75,29 @@ saveButton.addEventListener('click', () => {
     // downloadLink.click();
 });
 
+document.getElementById("validate-link").addEventListener("click", function (event) {
+    const phoneNumberInput = document.getElementById("phone-number");
+    const errorMessage = document.getElementById("error-message");
 
+    // Check if the input field is empty
+    if (!phoneNumberInput.value.trim()) {
+        // Prevent the link from navigating
+        event.preventDefault();
 
+        // Show the alert
+        alert("Por favor, ingresa tu número de WhatsApp antes de continuar.");
 
+        // Show the error message (optional for UI feedback)
+        if (errorMessage) {
+            errorMessage.style.display = "block";
+        }
+
+        // Focus the input field for user convenience
+        phoneNumberInput.focus();
+    } else {
+        // Hide the error message if the input is valid
+        if (errorMessage) {
+            errorMessage.style.display = "none";
+        }
+    }
+});

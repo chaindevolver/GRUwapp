@@ -402,3 +402,41 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .footerlinksContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footerlink, .cat, .footerAboutus {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Hide elements with hidden class */
+.hidden {
+    display: none;
+}
