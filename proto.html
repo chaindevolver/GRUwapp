@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Options</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+label {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #007bff;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + span {
+    font-weight: bold;
+    color: #007bff;
+}
+button {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+    <div class="container">
+        <h1>How do you want to receive the information</h1>
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="pdf-checkbox">
+                <span>Via PDF Folder</span>
+            </label>
+            <label>
+                <input type="checkbox" id="whatsapp-checkbox">
+                <span>Access Directly to WhatsApp</span>
+            </label>
+        </div>
+    </div>
+<button>Proceed</button>
+    <script>
+        // script.js
+
+const pdfCheckbox = document.getElementById('pdf-checkbox');
+const whatsappCheckbox = document.getElementById('whatsapp-checkbox');
+
+// Add event listeners to ensure only one checkbox is selected at a time
+pdfCheckbox.addEventListener('change', () => {
+    if (pdfCheckbox.checked) {
+        whatsappCheckbox.checked = false;
+    }
+});
+
+whatsappCheckbox.addEventListener('change', () => {
+    if (whatsappCheckbox.checked) {
+        pdfCheckbox.checked = false;
+    }
+});
+
+    </script>
+</body>
+</html>

